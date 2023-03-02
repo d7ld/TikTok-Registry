@@ -35,7 +35,7 @@ class Registry():
         self.sleep = 300
         self.run = True
         os.system("mode 70,10")
-        ctypes.windll.kernel32.SetConsoleTitleW("Made By D7 or @d7ld")
+        ctypes.windll.kernel32.SetConsoleTitleW("Made By D7 or @d7ld & F15")
         print(f"{Fore.LIGHTBLUE_EX}{banner}")
         Print("TikTok Accounts Creator")
         self.main()
