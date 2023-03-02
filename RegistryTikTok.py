@@ -10,11 +10,9 @@ from urllib.parse import urlencode
 init(autoreset=True)
 
 banner = """
-
                     ╔═╗╔╗╔╔═╗╦ ╦
                     ╚═╗║║║║ ║║║║
                     ╚═╝╝╚╝╚═╝╚╩╝
-
 """
 
 def Print(text: str):
@@ -34,6 +32,7 @@ class Registry():
         self.err = 0
         self.sleep = 300
         self.run = True
+        self.device = self._get_device()
         os.system("mode 70,10")
         ctypes.windll.kernel32.SetConsoleTitleW("Made By D7 or @d7ld & F15")
         print(f"{Fore.LIGHTBLUE_EX}{banner}")
@@ -67,6 +66,7 @@ class Registry():
                         self.err +=1
                         time.sleep(self.sleep)
                 except Exception as e:
+                    print(e)
                     continue
             time.sleep(sleep)
         self.run = False
@@ -88,7 +88,7 @@ class Registry():
             time.sleep(0.70)
 
     def _validate_account_params(self):
-        device = self._get_device()
+        device = self.device
         return urlencode({
             "residence": "SA",
             "device_id": device["device_id"],
@@ -149,7 +149,7 @@ class Registry():
         birthday = f"birthday=1986-01-02"
         password = self._get_random_password()
         username = self._get_random_username()
-        deviceid = self._get_device()["device_id"]
+        deviceid = self.device["device_id"]
         params = STikTok.Sign(f"aid=143243&device_id={deviceid}&verifyFp=verify_lbtcmozr_SV8EAMJv_poB2_4xJD_9klD_JPCNTTpXYuy2&webcast_language=ar&msToken={STikTok.msToken(None)}",
                               "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
         url = f'https://api22-normal-c-useast1a.tiktokv.com/passport/web/username/register/?'+params
