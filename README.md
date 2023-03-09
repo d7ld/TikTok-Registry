@@ -1,5 +1,5 @@
 <h2>Made By @d7ld & @jackdeloasa</h2>
-<h2>Special Thenks For xtekky</h2>
+<h2>Credits For The Help xtekky</h2>
 <h2>TikTok Account Creator</h2>
 <h2>No Proxy Need</h2>
 <h2>Sleep Mode</h2>
